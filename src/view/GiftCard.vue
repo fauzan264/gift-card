@@ -24,21 +24,21 @@ const downloadImage = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-violet-100 flex items-center justify-center p-4">
-    <div class="max-w-xl w-full bg-white p-6 rounded-2xl shadow space-y-6">
-      <h1 class="text-3xl font-bold text-center">Gift Card Generator</h1>
-
-      <CanvasGiftCard
-        :dear="form.dear"
-        :message="form.message"
-        :from="form.from"
-        :imageFile="imageFile"
-        ref="canvasRef"
-      />
-
-      <FileUpload @file-selected="handleFile" />
-      <GiftForm v-model:form="form" />
-      <DownloadButton @download="downloadImage" />
+    <div class="min-h-screen bg-violet-100 flex items-center justify-center p-4">
+        <div class="max-w-xl w-full bg-white p-6 rounded-2xl shadow space-y-6">
+            <h1 class="text-3xl font-bold text-center">Gift Card Generator</h1>
+            
+            <CanvasGiftCard
+                :dear="form.dear"
+                :message="form.message"
+                :from="form.from"
+                :imageFile="imageFile"
+                ref="canvasRef"
+            />
+            
+            <FileUpload @file-selected="handleFile" />
+            <GiftForm v-model:form="form" />
+            <DownloadButton @download="downloadImage" />
+        </div>
     </div>
-  </div>
 </template>
